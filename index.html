@@ -7,231 +7,212 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
+
+  <!-- STICKY BOTTOM BAR -->
+  <div class="sticky-bar">
+    <a href="#contact">Book a Free Strategy Call &nbsp;→</a>
+  </div>
 
   <!-- NAV -->
   <nav class="nav" id="nav">
     <div class="nav__inner">
       <a href="#" class="nav__logo">
-        <span class="logo-mark">CS</span>
-        <span class="logo-text">Churnless<span class="accent">Studios</span></span>
+        <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
+          <path d="M16 3L2 28h28L16 3z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M16 12L9 25h14L16 12z" fill="white" fill-opacity="0.15" stroke="white" stroke-width="1" stroke-linejoin="round"/>
+        </svg>
+        <span class="logo-text">Churnless Studios</span>
       </a>
       <ul class="nav__links">
-        <li><a href="#services">Services</a></li>
+        <li class="has-dropdown">
+          <a href="#solutions">Solutions <span class="chevron">›</span></a>
+          <div class="dropdown">
+            <a href="#solutions">AI Voice Agents</a>
+            <a href="#solutions">Lead Nurture Systems</a>
+            <a href="#solutions">AI Sales Chatbots</a>
+            <a href="#solutions">White-Label AI</a>
+          </div>
+        </li>
         <li><a href="#how-it-works">How It Works</a></li>
+        <li class="has-dropdown">
+          <a href="#industries">Industries <span class="chevron">›</span></a>
+          <div class="dropdown">
+            <a href="#industries">Real Estate</a>
+            <a href="#industries">Med Spa &amp; Wellness</a>
+            <a href="#industries">SaaS &amp; Tech</a>
+            <a href="#industries">Insurance &amp; Mortgage</a>
+          </div>
+        </li>
         <li><a href="#results">Results</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#compare">Compare</a></li>
       </ul>
-      <a href="#contact" class="btn btn--outline nav__cta">Book a Call</a>
+      <a href="#contact" class="btn btn--blue nav__cta">Book a Call &nbsp;→</a>
       <button class="nav__hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
     </div>
     <div class="nav__mobile" id="mobileMenu">
-      <a href="#services">Services</a>
+      <a href="#solutions">Solutions</a>
       <a href="#how-it-works">How It Works</a>
+      <a href="#industries">Industries</a>
       <a href="#results">Results</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact" class="btn btn--primary">Book a Call</a>
+      <a href="#compare">Compare</a>
+      <a href="#contact" class="btn btn--blue">Book a Call →</a>
     </div>
   </nav>
 
   <!-- HERO -->
   <section class="hero" id="home">
-    <div class="hero__bg">
-      <div class="hero__grid"></div>
-      <div class="hero__glow hero__glow--1"></div>
-      <div class="hero__glow hero__glow--2"></div>
-    </div>
+    <canvas id="particleCanvas"></canvas>
     <div class="container hero__content">
-      <div class="hero__badge">
-        <span class="badge-dot"></span>
-        AI-Powered Revenue Systems
-      </div>
+      <p class="hero__eyebrow">AI Revenue Infrastructure</p>
       <h1 class="hero__headline">
-        We Build AI That<br />
-        <span class="gradient-text">Fills Your Calendar</span><br />
-        &amp; Closes More Deals
+        Replace your marketing<br />
+        team. <em class="hero__italic">Automate your<br />
+        front desk.</em>
       </h1>
       <p class="hero__sub">
-        Churnless Studios deploys done-for-you AI voice agents, lead nurturing systems, and automated follow-up pipelines — so your team focuses on selling, not chasing.
+        We build end-to-end AI systems that generate, capture,<br class="br-desktop" />
+        qualify, and convert demand automatically — replacing entire<br class="br-desktop" />
+        operational workflows with one unified engine.
       </p>
       <div class="hero__actions">
-        <a href="#contact" class="btn btn--primary btn--lg">Get Your Free Strategy Call</a>
+        <a href="#contact" class="btn btn--blue btn--lg">Deploy Your System &nbsp;→</a>
         <a href="#how-it-works" class="btn btn--ghost btn--lg">See How It Works</a>
       </div>
-      <div class="hero__stats">
-        <div class="stat">
-          <span class="stat__num">3x</span>
-          <span class="stat__label">Avg. Lead Response Rate</span>
-        </div>
-        <div class="stat__divider"></div>
-        <div class="stat">
-          <span class="stat__num">10min</span>
-          <span class="stat__label">First Response Time</span>
-        </div>
-        <div class="stat__divider"></div>
-        <div class="stat">
-          <span class="stat__num">40%+</span>
-          <span class="stat__label">More Booked Appointments</span>
-        </div>
-      </div>
-    </div>
-    <div class="hero__scroll">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
     </div>
   </section>
 
-  <!-- LOGOS -->
-  <section class="logos">
-    <div class="container">
-      <p class="logos__label">Trusted by agencies &amp; businesses across industries</p>
-      <div class="logos__track">
-        <div class="logos__inner">
-          <span>Real Estate</span>
-          <span>SaaS</span>
-          <span>E-Commerce</span>
-          <span>Coaching &amp; Consulting</span>
-          <span>Med Spa &amp; Wellness</span>
-          <span>Insurance</span>
-          <span>Mortgage</span>
-          <span>Real Estate</span>
-          <span>SaaS</span>
-          <span>E-Commerce</span>
-          <span>Coaching &amp; Consulting</span>
-          <span>Med Spa &amp; Wellness</span>
-          <span>Insurance</span>
-          <span>Mortgage</span>
-        </div>
+  <!-- STATS -->
+  <section class="stats">
+    <div class="container stats__grid">
+      <div class="stat-item">
+        <span class="stat-item__num" data-target="80">0</span><span class="stat-item__unit">%</span>
+        <p class="stat-item__label">Increase in answered calls</p>
+      </div>
+      <div class="stat-item">
+        <span class="stat-item__num" data-target="60">0</span><span class="stat-item__unit">%</span>
+        <p class="stat-item__label">More booked appointments</p>
+      </div>
+      <div class="stat-item">
+        <span class="stat-item__num" data-target="45">0</span><span class="stat-item__unit">%</span>
+        <p class="stat-item__label">Reduction in cost per acquisition</p>
+      </div>
+      <div class="stat-item">
+        <span class="stat-item__num" data-target="7">0</span>
+        <p class="stat-item__label">AI systems operating autonomously</p>
       </div>
     </div>
   </section>
 
   <!-- PROBLEM -->
-  <section class="problem">
+  <section class="problem" id="problem">
     <div class="container">
-      <div class="section-label">The Problem</div>
-      <h2 class="section-title">Your Leads Are Slipping Through <span class="gradient-text">The Cracks</span></h2>
+      <p class="section-eyebrow">The Problem</p>
+      <h2 class="problem__headline">Very few businesses are running on<br />systems that actually work.</h2>
       <div class="problem__grid">
-        <div class="problem__card">
-          <div class="problem__icon">⏳</div>
-          <h3>Slow Follow-Up</h3>
-          <p>78% of deals go to the first responder. If you're not calling back within 5 minutes, you're losing money.</p>
+        <div class="problem__item">
+          <h3>Missed calls become lost revenue</h3>
+          <p>62% of calls to small businesses go unanswered. Every missed call is a lead your competitor captures automatically.</p>
         </div>
-        <div class="problem__card">
-          <div class="problem__icon">🔁</div>
-          <h3>Repetitive Manual Tasks</h3>
-          <p>Your team spends hours on calls that go nowhere, chasing cold leads, and logging data by hand.</p>
+        <div class="problem__item">
+          <h3>Slow follow-up kills deals</h3>
+          <p>Leads contacted within 5 minutes convert 9x more. Most businesses follow up hours or days later — if at all.</p>
         </div>
-        <div class="problem__card">
-          <div class="problem__icon">📉</div>
-          <h3>Inconsistent Pipeline</h3>
-          <p>Revenue spikes and dips because there's no system reliably converting leads to booked calls 24/7.</p>
+        <div class="problem__item">
+          <h3>Fragmented tools, no unified strategy</h3>
+          <p>Ads, SEO, content, and social running in silos with no coordinated intelligence means wasted budget and inconsistent results.</p>
         </div>
-        <div class="problem__card">
-          <div class="problem__icon">💸</div>
-          <h3>Ad Spend Wasted</h3>
-          <p>You're paying for leads that never get a proper follow-up sequence. That's money out the window.</p>
+        <div class="problem__item">
+          <h3>Rising acquisition costs with no ceiling</h3>
+          <p>Without optimisation loops and automated testing, CAC keeps climbing while margins compress quarter over quarter.</p>
+        </div>
+        <div class="problem__item">
+          <h3>Invisible to organic search</h3>
+          <p>Without consistent content infrastructure and SEO systems, you're invisible to the 68% of buyers who start with search.</p>
+        </div>
+        <div class="problem__item">
+          <h3>Manual operations bottleneck growth</h3>
+          <p>Every hour your team spends on admin, follow-up, and scheduling is an hour not spent on high-value client work.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SERVICES -->
-  <section class="services" id="services">
+  <!-- SOLUTIONS -->
+  <section class="solutions" id="solutions">
     <div class="container">
-      <div class="section-label">What We Build</div>
-      <h2 class="section-title">AI Revenue Systems That <span class="gradient-text">Work While You Sleep</span></h2>
-      <p class="section-sub">Every system is custom-built for your business, integrated with your existing tools, and white-labelled — your brand, your client relationships.</p>
-      <div class="services__grid">
+      <p class="section-eyebrow">What We Build</p>
+      <h2 class="solutions__headline">One unified AI engine.<br /><em class="blue-italic">Six revenue systems.</em></h2>
+      <p class="solutions__sub">Every system is custom-built, integrated with your existing stack, and running 24/7 — no headcount required.</p>
+      <div class="solutions__grid">
 
-        <div class="service-card service-card--featured">
-          <div class="service-card__tag">Most Popular</div>
-          <div class="service-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 18.5a6.5 6.5 0 100-13 6.5 6.5 0 000 13z"/><path d="M12 14a2 2 0 100-4 2 2 0 000 4z"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-          </div>
+        <div class="solution-card solution-card--wide">
+          <div class="solution-card__number">01</div>
           <h3>AI Voice Agents</h3>
-          <p>Human-sounding AI that calls your leads instantly, qualifies them, and books appointments directly into your calendar — 24/7, no days off.</p>
+          <p>Human-sounding AI that calls your leads instantly, qualifies them, and books directly into your calendar — around the clock.</p>
           <ul>
             <li>Instant inbound &amp; outbound calling</li>
             <li>Live calendar booking</li>
             <li>CRM sync &amp; call summaries</li>
-            <li>Custom voice &amp; script</li>
           </ul>
         </div>
 
-        <div class="service-card">
-          <div class="service-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 9h8M8 13h5M3 20l1.3-3.9A9 9 0 1112 21a8.96 8.96 0 01-4.7-1.3L3 20z"/></svg>
-          </div>
-          <h3>AI Lead Nurture &amp; Follow-Up</h3>
-          <p>Multi-channel drip sequences via SMS, email, and DM that keep your leads warm and push them toward booking — automatically.</p>
+        <div class="solution-card">
+          <div class="solution-card__number">02</div>
+          <h3>Lead Nurture &amp; Follow-Up</h3>
+          <p>Multi-channel drip sequences via SMS, email, and DM that push leads toward booking automatically.</p>
           <ul>
             <li>SMS + email sequences</li>
             <li>Behavioural triggers</li>
-            <li>Personalised messaging at scale</li>
             <li>Re-engagement campaigns</li>
           </ul>
         </div>
 
-        <div class="service-card">
-          <div class="service-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
-          </div>
-          <h3>AI Sales Assistants</h3>
-          <p>Smart chatbots trained on your offers and FAQs that handle objections, qualify prospects, and hand off to your closers at exactly the right moment.</p>
+        <div class="solution-card">
+          <div class="solution-card__number">03</div>
+          <h3>AI Sales Chatbots</h3>
+          <p>Trained on your offer and FAQs — handles objections, qualifies prospects, and hands off to your closers at exactly the right moment.</p>
           <ul>
-            <li>Website &amp; landing page chat</li>
-            <li>Objection handling scripts</li>
+            <li>Objection handling</li>
             <li>Hot lead alerts</li>
             <li>Seamless human handoff</li>
           </ul>
         </div>
 
-        <div class="service-card">
-          <div class="service-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
-          </div>
-          <h3>Revenue Automation Audits</h3>
-          <p>We map your entire lead-to-close workflow, identify leaks costing you revenue, and deliver an automation blueprint you can implement immediately.</p>
+        <div class="solution-card">
+          <div class="solution-card__number">04</div>
+          <h3>SEO &amp; Content Systems</h3>
+          <p>AI-powered content infrastructure that builds your organic presence and drives qualified inbound traffic consistently.</p>
           <ul>
-            <li>Full funnel analysis</li>
-            <li>Automation opportunity map</li>
-            <li>ROI projections</li>
-            <li>Priority action plan</li>
+            <li>Programmatic SEO</li>
+            <li>Content calendar automation</li>
+            <li>Keyword clustering &amp; topical authority</li>
           </ul>
         </div>
 
-        <div class="service-card">
-          <div class="service-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-          </div>
-          <h3>CRM &amp; Stack Integration</h3>
-          <p>We connect your AI systems directly into your existing CRM, ad platforms, and booking tools — no middleware, no Zapier tax, no headaches.</p>
+        <div class="solution-card">
+          <div class="solution-card__number">05</div>
+          <h3>Paid Ads Automation</h3>
+          <p>AI-managed ad campaigns that test, optimise, and scale what works — killing wasted spend in real time.</p>
           <ul>
-            <li>GoHighLevel, HubSpot, Salesforce</li>
-            <li>Meta &amp; Google Ads sync</li>
-            <li>Calendly, Acuity, Cal.com</li>
-            <li>Custom API integrations</li>
+            <li>Meta &amp; Google Ads</li>
+            <li>Auto-creative testing</li>
+            <li>Budget optimisation loops</li>
           </ul>
         </div>
 
-        <div class="service-card">
-          <div class="service-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
+        <div class="solution-card solution-card--wide">
+          <div class="solution-card__number">06</div>
           <h3>White-Label AI for Agencies</h3>
-          <p>Resell our AI revenue systems under your brand. We build, you deliver. No Churnless branding, full client ownership, recurring revenue for you.</p>
+          <p>Resell our full AI revenue stack under your brand. We build it, you deliver it — no Churnless branding, full client ownership, recurring revenue for you.</p>
           <ul>
             <li>Fully white-labelled</li>
             <li>Agency partner pricing</li>
-            <li>Dedicated support</li>
-            <li>Your brand, your revenue</li>
+            <li>Dedicated build support</li>
           </ul>
         </div>
 
@@ -240,42 +221,49 @@
   </section>
 
   <!-- HOW IT WORKS -->
-  <section class="how-it-works" id="how-it-works">
+  <section class="hiw" id="how-it-works">
     <div class="container">
-      <div class="section-label">The Process</div>
-      <h2 class="section-title">From Zero to <span class="gradient-text">Revenue Machine</span> in 14 Days</h2>
-      <div class="steps">
-        <div class="step">
-          <div class="step__number">01</div>
-          <div class="step__content">
-            <h3>Strategy Call</h3>
-            <p>We audit your current lead flow, identify your biggest revenue leaks, and map out exactly what needs to be built for your specific business.</p>
-          </div>
+      <p class="section-eyebrow">The Process</p>
+      <h2 class="hiw__headline">From zero to revenue machine<br /><em class="blue-italic">in 14 days.</em></h2>
+      <div class="hiw__steps">
+        <div class="hiw__step">
+          <div class="hiw__step-num">01</div>
+          <h3>Strategy Call</h3>
+          <p>We audit your lead flow, identify your biggest revenue leaks, and map out exactly what needs to be built for your specific business.</p>
         </div>
-        <div class="step__connector"></div>
-        <div class="step">
-          <div class="step__number">02</div>
-          <div class="step__content">
-            <h3>Custom Build</h3>
-            <p>Our team builds your AI systems — voice agents, follow-up sequences, chatbots — custom to your offer, your tone, and your existing tech stack.</p>
-          </div>
+        <div class="hiw__step">
+          <div class="hiw__step-num">02</div>
+          <h3>Custom Build</h3>
+          <p>Our team builds your AI systems — voice agents, follow-up sequences, chatbots — custom to your offer and existing tech stack.</p>
         </div>
-        <div class="step__connector"></div>
-        <div class="step">
-          <div class="step__number">03</div>
-          <div class="step__content">
-            <h3>Integration &amp; Testing</h3>
-            <p>We integrate everything into your CRM and calendar, run full QA testing, and refine scripts until responses feel natural and convert.</p>
-          </div>
+        <div class="hiw__step">
+          <div class="hiw__step-num">03</div>
+          <h3>Integration &amp; Testing</h3>
+          <p>We integrate into your CRM and calendar, run full QA, and refine scripts until responses feel natural and convert.</p>
         </div>
-        <div class="step__connector"></div>
-        <div class="step">
-          <div class="step__number">04</div>
-          <div class="step__content">
-            <h3>Launch &amp; Optimise</h3>
-            <p>We go live, monitor performance, and continuously optimise based on real call data and conversion metrics — your systems keep getting smarter.</p>
-          </div>
+        <div class="hiw__step">
+          <div class="hiw__step-num">04</div>
+          <h3>Launch &amp; Optimise</h3>
+          <p>We go live, monitor performance, and continuously optimise based on real data — your systems keep getting smarter.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES -->
+  <section class="industries" id="industries">
+    <div class="container">
+      <p class="section-eyebrow">Industries</p>
+      <h2 class="industries__headline">Built for businesses<br />that run on leads.</h2>
+      <div class="industries__grid">
+        <div class="industry-item"><span>01</span> Real Estate</div>
+        <div class="industry-item"><span>02</span> Med Spa &amp; Wellness</div>
+        <div class="industry-item"><span>03</span> SaaS &amp; Tech</div>
+        <div class="industry-item"><span>04</span> Insurance &amp; Mortgage</div>
+        <div class="industry-item"><span>05</span> Coaching &amp; Consulting</div>
+        <div class="industry-item"><span>06</span> Home Services</div>
+        <div class="industry-item"><span>07</span> E-Commerce</div>
+        <div class="industry-item"><span>08</span> Digital Agencies</div>
       </div>
     </div>
   </section>
@@ -283,15 +271,15 @@
   <!-- RESULTS -->
   <section class="results" id="results">
     <div class="container">
-      <div class="section-label">Proof It Works</div>
-      <h2 class="section-title">Real Businesses, <span class="gradient-text">Real Results</span></h2>
-      <div class="testimonials">
+      <p class="section-eyebrow">Results</p>
+      <h2 class="results__headline">Real businesses.<br /><em class="blue-italic">Real numbers.</em></h2>
+      <div class="results__grid">
 
-        <div class="testimonial">
-          <div class="testimonial__stars">★★★★★</div>
-          <p class="testimonial__quote">"Our show-up rate went from 40% to 74% after Churnless set up the AI follow-up system. The voice agent alone paid for itself in the first week."</p>
-          <div class="testimonial__author">
-            <div class="testimonial__avatar">JM</div>
+        <div class="result-card">
+          <div class="result-card__stars">★★★★★</div>
+          <p class="result-card__quote">"Our show-up rate went from 40% to 74% after Churnless set up the AI follow-up system. The voice agent alone paid for itself in the first week."</p>
+          <div class="result-card__author">
+            <div class="result-card__avatar">JM</div>
             <div>
               <strong>James M.</strong>
               <span>Solar Sales Agency, Texas</span>
@@ -299,11 +287,11 @@
           </div>
         </div>
 
-        <div class="testimonial">
-          <div class="testimonial__stars">★★★★★</div>
-          <p class="testimonial__quote">"I was skeptical about AI calling my leads but the voice is unbelievably natural. We booked 23 appointments in the first 3 days after launch."</p>
-          <div class="testimonial__author">
-            <div class="testimonial__avatar">SR</div>
+        <div class="result-card">
+          <div class="result-card__stars">★★★★★</div>
+          <p class="result-card__quote">"I was skeptical about AI calling my leads but the voice is unbelievably natural. We booked 23 appointments in the first 3 days after launch."</p>
+          <div class="result-card__author">
+            <div class="result-card__avatar">SR</div>
             <div>
               <strong>Sarah R.</strong>
               <span>Real Estate Brokerage, Florida</span>
@@ -311,11 +299,11 @@
           </div>
         </div>
 
-        <div class="testimonial">
-          <div class="testimonial__stars">★★★★★</div>
-          <p class="testimonial__quote">"The white-label setup was seamless. My clients think I built it myself. Churnless is basically my secret weapon — I've added $8k/mo in recurring retainers."</p>
-          <div class="testimonial__author">
-            <div class="testimonial__avatar">DK</div>
+        <div class="result-card">
+          <div class="result-card__stars">★★★★★</div>
+          <p class="result-card__quote">"My clients think I built it myself. Churnless is basically my secret weapon — I've added $8k/mo in recurring retainers with zero extra headcount."</p>
+          <div class="result-card__author">
+            <div class="result-card__avatar">DK</div>
             <div>
               <strong>David K.</strong>
               <span>Digital Marketing Agency</span>
@@ -323,11 +311,11 @@
           </div>
         </div>
 
-        <div class="testimonial">
-          <div class="testimonial__stars">★★★★★</div>
-          <p class="testimonial__quote">"We were spending $15k/month on ads and barely breaking even. After 30 days with Churnless, our cost per booked call dropped by 60%."</p>
-          <div class="testimonial__author">
-            <div class="testimonial__avatar">TN</div>
+        <div class="result-card">
+          <div class="result-card__stars">★★★★★</div>
+          <p class="result-card__quote">"We were spending $15k/month on ads and barely breaking even. After 30 days with Churnless, our cost per booked call dropped by 60%."</p>
+          <div class="result-card__author">
+            <div class="result-card__avatar">TN</div>
             <div>
               <strong>Tanya N.</strong>
               <span>Med Spa Owner, California</span>
@@ -339,26 +327,67 @@
     </div>
   </section>
 
-  <!-- METRICS -->
-  <section class="metrics">
+  <!-- COMPARE -->
+  <section class="compare" id="compare">
     <div class="container">
-      <div class="metrics__grid">
-        <div class="metric">
-          <span class="metric__num">500+</span>
-          <span class="metric__label">AI Systems Deployed</span>
-        </div>
-        <div class="metric">
-          <span class="metric__num">$12M+</span>
-          <span class="metric__label">Revenue Generated for Clients</span>
-        </div>
-        <div class="metric">
-          <span class="metric__num">98%</span>
-          <span class="metric__label">Client Retention Rate</span>
-        </div>
-        <div class="metric">
-          <span class="metric__num">14 Days</span>
-          <span class="metric__label">Average Time to Launch</span>
-        </div>
+      <p class="section-eyebrow">Compare</p>
+      <h2 class="compare__headline">Why Churnless Studios<br />vs. the alternatives.</h2>
+      <div class="compare__table-wrap">
+        <table class="compare__table">
+          <thead>
+            <tr>
+              <th></th>
+              <th class="compare__us">Churnless Studios</th>
+              <th>In-House Team</th>
+              <th>Typical Agency</th>
+              <th>DIY Software</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Live within 14 days</td>
+              <td class="compare__us"><span class="check-yes">✓</span></td>
+              <td><span class="check-no">✗</span></td>
+              <td><span class="check-no">✗</span></td>
+              <td><span class="check-no">✗</span></td>
+            </tr>
+            <tr>
+              <td>24/7 automated follow-up</td>
+              <td class="compare__us"><span class="check-yes">✓</span></td>
+              <td><span class="check-no">✗</span></td>
+              <td><span class="check-yes">✓</span></td>
+              <td><span class="check-yes">✓</span></td>
+            </tr>
+            <tr>
+              <td>AI voice agents included</td>
+              <td class="compare__us"><span class="check-yes">✓</span></td>
+              <td><span class="check-no">✗</span></td>
+              <td><span class="check-no">✗</span></td>
+              <td><span class="check-no">✗</span></td>
+            </tr>
+            <tr>
+              <td>White-label available</td>
+              <td class="compare__us"><span class="check-yes">✓</span></td>
+              <td><span class="check-no">✗</span></td>
+              <td><span class="check-no">✗</span></td>
+              <td><span class="check-no">✗</span></td>
+            </tr>
+            <tr>
+              <td>No long-term contracts</td>
+              <td class="compare__us"><span class="check-yes">✓</span></td>
+              <td>—</td>
+              <td><span class="check-no">✗</span></td>
+              <td><span class="check-yes">✓</span></td>
+            </tr>
+            <tr>
+              <td>Ongoing optimisation</td>
+              <td class="compare__us"><span class="check-yes">✓</span></td>
+              <td><span class="check-yes">✓</span></td>
+              <td>Sometimes</td>
+              <td><span class="check-no">✗</span></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
@@ -366,68 +395,53 @@
   <!-- PRICING -->
   <section class="pricing" id="pricing">
     <div class="container">
-      <div class="section-label">Pricing</div>
-      <h2 class="section-title">Straightforward Pricing, <span class="gradient-text">Serious ROI</span></h2>
-      <p class="section-sub">All plans include full build-out, integration, and ongoing optimisation. No setup fees, no hidden costs.</p>
+      <p class="section-eyebrow">Pricing</p>
+      <h2 class="pricing__headline">Straightforward pricing.<br /><em class="blue-italic">Serious ROI.</em></h2>
       <div class="pricing__grid">
 
         <div class="pricing-card">
           <div class="pricing-card__name">Starter</div>
-          <div class="pricing-card__price">
-            <span class="price-currency">$</span>
-            <span class="price-amount">997</span>
-            <span class="price-period">/mo</span>
-          </div>
-          <p class="pricing-card__desc">Perfect for solo operators and small teams just getting started with AI automation.</p>
-          <ul class="pricing-card__features">
-            <li><span class="check">✓</span> 1 AI Voice Agent</li>
-            <li><span class="check">✓</span> SMS + Email Follow-Up Sequence</li>
-            <li><span class="check">✓</span> Calendar Integration</li>
-            <li><span class="check">✓</span> CRM Sync (1 platform)</li>
-            <li><span class="check">✓</span> Monthly Performance Report</li>
-            <li><span class="check check--no">✗</span> AI Sales Chatbot</li>
-            <li><span class="check check--no">✗</span> White-Label Option</li>
+          <div class="pricing-card__price">$997<span>/mo</span></div>
+          <p class="pricing-card__desc">For solo operators and small teams getting started with AI automation.</p>
+          <ul>
+            <li>1 AI Voice Agent</li>
+            <li>SMS + Email Follow-Up</li>
+            <li>Calendar Integration</li>
+            <li>CRM Sync (1 platform)</li>
+            <li>Monthly Performance Report</li>
           </ul>
-          <a href="#contact" class="btn btn--outline btn--full">Get Started</a>
+          <a href="#contact" class="btn btn--outline-blue btn--full">Get Started</a>
         </div>
 
         <div class="pricing-card pricing-card--featured">
           <div class="pricing-card__badge">Most Popular</div>
           <div class="pricing-card__name">Growth</div>
-          <div class="pricing-card__price">
-            <span class="price-currency">$</span>
-            <span class="price-amount">2,497</span>
-            <span class="price-period">/mo</span>
-          </div>
-          <p class="pricing-card__desc">For growing businesses ready to deploy a full AI revenue system and scale fast.</p>
-          <ul class="pricing-card__features">
-            <li><span class="check">✓</span> 3 AI Voice Agents</li>
-            <li><span class="check">✓</span> Full Multi-Channel Nurture Suite</li>
-            <li><span class="check">✓</span> AI Sales Chatbot</li>
-            <li><span class="check">✓</span> Multi-CRM Integration</li>
-            <li><span class="check">✓</span> Ad Platform Sync (Meta + Google)</li>
-            <li><span class="check">✓</span> Bi-Weekly Optimisation Calls</li>
-            <li><span class="check check--no">✗</span> White-Label Option</li>
+          <div class="pricing-card__price">$2,497<span>/mo</span></div>
+          <p class="pricing-card__desc">For growing businesses ready to deploy a full AI revenue system.</p>
+          <ul>
+            <li>3 AI Voice Agents</li>
+            <li>Full Multi-Channel Nurture</li>
+            <li>AI Sales Chatbot</li>
+            <li>Multi-CRM Integration</li>
+            <li>Meta + Google Ads Sync</li>
+            <li>Bi-Weekly Optimisation Calls</li>
           </ul>
-          <a href="#contact" class="btn btn--primary btn--full">Get Started</a>
+          <a href="#contact" class="btn btn--blue btn--full">Get Started</a>
         </div>
 
         <div class="pricing-card">
           <div class="pricing-card__name">Agency</div>
-          <div class="pricing-card__price">
-            <span class="price-amount">Custom</span>
-          </div>
-          <p class="pricing-card__desc">For agencies and enterprises that want to white-label our systems and sell AI to their clients.</p>
-          <ul class="pricing-card__features">
-            <li><span class="check">✓</span> Unlimited Voice Agents</li>
-            <li><span class="check">✓</span> Full White-Label Rights</li>
-            <li><span class="check">✓</span> Dedicated Account Manager</li>
-            <li><span class="check">✓</span> Custom Integrations</li>
-            <li><span class="check">✓</span> Priority Build Queue</li>
-            <li><span class="check">✓</span> Weekly Strategy Calls</li>
-            <li><span class="check">✓</span> Partner Revenue Share</li>
+          <div class="pricing-card__price">Custom</div>
+          <p class="pricing-card__desc">For agencies and enterprises that want to white-label and resell AI systems.</p>
+          <ul>
+            <li>Unlimited Voice Agents</li>
+            <li>Full White-Label Rights</li>
+            <li>Dedicated Account Manager</li>
+            <li>Custom Integrations</li>
+            <li>Priority Build Queue</li>
+            <li>Partner Revenue Share</li>
           </ul>
-          <a href="#contact" class="btn btn--outline btn--full">Talk to Us</a>
+          <a href="#contact" class="btn btn--outline-blue btn--full">Talk to Us</a>
         </div>
 
       </div>
@@ -436,113 +450,93 @@
 
   <!-- FAQ -->
   <section class="faq" id="faq">
-    <div class="container">
-      <div class="section-label">FAQ</div>
-      <h2 class="section-title">Common <span class="gradient-text">Questions</span></h2>
+    <div class="container faq__inner">
+      <div class="faq__left">
+        <p class="section-eyebrow">FAQ</p>
+        <h2 class="faq__headline">Common<br />questions.</h2>
+        <a href="#contact" class="btn btn--blue">Book a Call →</a>
+      </div>
       <div class="faq__list">
-
         <div class="faq__item">
-          <button class="faq__question">Will the AI sound robotic to my leads?<span class="faq__arrow">↓</span></button>
-          <div class="faq__answer">
-            <p>Not at all. We use the latest conversational AI voice models with natural pacing, pauses, and tone variation. Most leads don't realise they're talking to an AI. We always give you full demos before going live.</p>
-          </div>
+          <button class="faq__q">Will the AI sound robotic to my leads?<span class="faq__arrow">+</span></button>
+          <div class="faq__a"><p>Not at all. We use the latest conversational AI voice models with natural pacing, pauses, and tone variation. Most leads don't realise they're talking to an AI. We always give you full demos before going live.</p></div>
         </div>
-
         <div class="faq__item">
-          <button class="faq__question">How long does it take to get set up?<span class="faq__arrow">↓</span></button>
-          <div class="faq__answer">
-            <p>Most systems are live within 7–14 days of signing. The timeline depends on your tech stack and how quickly you can get us access to your existing tools.</p>
-          </div>
+          <button class="faq__q">How long does setup take?<span class="faq__arrow">+</span></button>
+          <div class="faq__a"><p>Most systems are live within 7–14 days of signing. The timeline depends on your tech stack and how quickly you can get us access to your existing tools.</p></div>
         </div>
-
         <div class="faq__item">
-          <button class="faq__question">Do I need to use a specific CRM?<span class="faq__arrow">↓</span></button>
-          <div class="faq__answer">
-            <p>No. We integrate with virtually any CRM — GoHighLevel, HubSpot, Salesforce, Close, Pipedrive, and more. If you're using a custom or niche platform, we'll assess integration during the strategy call.</p>
-          </div>
+          <button class="faq__q">Do I need to use a specific CRM?<span class="faq__arrow">+</span></button>
+          <div class="faq__a"><p>No. We integrate with virtually any CRM — GoHighLevel, HubSpot, Salesforce, Close, Pipedrive, and more. Custom platforms are assessed during the strategy call.</p></div>
         </div>
-
         <div class="faq__item">
-          <button class="faq__question">What happens if a lead asks something the AI can't handle?<span class="faq__arrow">↓</span></button>
-          <div class="faq__answer">
-            <p>We build in smart escalation logic. When a lead signals strong intent or asks something outside the AI's scope, the system immediately alerts your team and can transfer the call or trigger a notification for live follow-up.</p>
-          </div>
+          <button class="faq__q">What happens if the AI can't handle a question?<span class="faq__arrow">+</span></button>
+          <div class="faq__a"><p>We build in smart escalation logic. When a lead signals strong intent or asks something outside scope, the system immediately alerts your team and can transfer the call or trigger a live follow-up notification.</p></div>
         </div>
-
         <div class="faq__item">
-          <button class="faq__question">Is this compliant with calling regulations (TCPA, DNC)?<span class="faq__arrow">↓</span></button>
-          <div class="faq__answer">
-            <p>Yes. We build in opt-out handling, DNC list checks, and calling-time restrictions. We recommend you work with your legal team on your specific compliance needs, but our systems are built with compliance as a foundation.</p>
-          </div>
+          <button class="faq__q">Is this TCPA / DNC compliant?<span class="faq__arrow">+</span></button>
+          <div class="faq__a"><p>Yes. We build in opt-out handling, DNC list checks, and calling-time restrictions. Our systems are built with compliance as a foundation — we recommend you also consult your legal team for your specific requirements.</p></div>
         </div>
-
         <div class="faq__item">
-          <button class="faq__question">Can I cancel at any time?<span class="faq__arrow">↓</span></button>
-          <div class="faq__answer">
-            <p>We work on monthly agreements with a 30-day notice period. We don't lock you in because we're confident the results will speak for themselves.</p>
-          </div>
+          <button class="faq__q">Can I cancel at any time?<span class="faq__arrow">+</span></button>
+          <div class="faq__a"><p>We work on monthly agreements with a 30-day notice period. We don't lock you in because we're confident the results will speak for themselves.</p></div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- CTA / CONTACT -->
+  <!-- CONTACT -->
   <section class="contact" id="contact">
     <div class="container">
-      <div class="contact__inner">
-        <div class="contact__glow"></div>
-        <div class="section-label">Get Started</div>
-        <h2 class="section-title">Ready to Stop Losing <span class="gradient-text">Revenue to Slow Follow-Up?</span></h2>
-        <p class="section-sub">Book a free 30-minute strategy call. We'll audit your current lead flow, show you exactly where you're losing money, and map out a custom AI system to fix it.</p>
-        <div class="contact__form-wrap">
-          <form class="contact__form" id="contactForm">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="firstName">First Name</label>
-                <input type="text" id="firstName" placeholder="Alex" required />
-              </div>
-              <div class="form-group">
-                <label for="lastName">Last Name</label>
-                <input type="text" id="lastName" placeholder="Johnson" required />
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" placeholder="alex@company.com" required />
-              </div>
-              <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" placeholder="+1 (555) 000-0000" />
-              </div>
+      <p class="section-eyebrow">Get Started</p>
+      <h2 class="contact__headline">Stop losing revenue<br /><em class="blue-italic">to slow follow-up.</em></h2>
+      <p class="contact__sub">Book a free 30-minute strategy call. We'll audit your current lead flow, show you exactly where you're losing money, and map out a custom AI system to fix it.</p>
+      <div class="contact__form-wrap">
+        <form class="contact__form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" placeholder="Alex" required />
             </div>
             <div class="form-group">
-              <label for="business">What type of business do you run?</label>
-              <select id="business">
-                <option value="">Select your industry...</option>
-                <option>Real Estate</option>
-                <option>SaaS / Tech</option>
-                <option>Agency</option>
-                <option>E-Commerce</option>
-                <option>Coaching / Consulting</option>
-                <option>Med Spa / Wellness</option>
-                <option>Insurance / Mortgage</option>
-                <option>Other</option>
-              </select>
+              <label>Last Name</label>
+              <input type="text" placeholder="Johnson" required />
             </div>
-            <div class="form-group">
-              <label for="message">What's your biggest challenge right now?</label>
-              <textarea id="message" rows="4" placeholder="Tell us about your current lead flow, what's not working, and what you'd like to achieve..."></textarea>
-            </div>
-            <button type="submit" class="btn btn--primary btn--lg btn--full">Book My Free Strategy Call →</button>
-            <p class="form-note">No spam, no pressure. Just a real conversation about how AI can grow your revenue.</p>
-          </form>
-          <div class="contact__success" id="formSuccess">
-            <div class="success-icon">✓</div>
-            <h3>You're Booked!</h3>
-            <p>We'll be in touch within 24 hours to confirm your strategy call. Check your inbox for a calendar invite.</p>
           </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" placeholder="alex@company.com" required />
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="+1 (555) 000-0000" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Industry</label>
+            <select>
+              <option value="">Select your industry...</option>
+              <option>Real Estate</option>
+              <option>SaaS / Tech</option>
+              <option>Agency</option>
+              <option>Med Spa / Wellness</option>
+              <option>Insurance / Mortgage</option>
+              <option>Coaching / Consulting</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>What's your biggest challenge right now?</label>
+            <textarea rows="4" placeholder="Tell us about your current lead flow and what you'd like to achieve..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--blue btn--lg btn--full">Book My Free Strategy Call →</button>
+          <p class="form-note">No spam, no pressure. Just a real conversation about growing your revenue with AI.</p>
+        </form>
+        <div class="contact__success" id="formSuccess">
+          <div class="success-icon">✓</div>
+          <h3>You're Booked!</h3>
+          <p>We'll be in touch within 24 hours to confirm your strategy call.</p>
         </div>
       </div>
     </div>
@@ -554,8 +548,11 @@
       <div class="footer__top">
         <div class="footer__brand">
           <a href="#" class="nav__logo">
-            <span class="logo-mark">CS</span>
-            <span class="logo-text">Churnless<span class="accent">Studios</span></span>
+            <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
+              <path d="M16 3L2 28h28L16 3z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M16 12L9 25h14L16 12z" fill="white" fill-opacity="0.15" stroke="white" stroke-width="1" stroke-linejoin="round"/>
+            </svg>
+            <span class="logo-text">Churnless Studios</span>
           </a>
           <p>We build AI revenue systems that turn leads into booked appointments — automatically, 24/7.</p>
           <div class="footer__social">
@@ -566,18 +563,18 @@
         </div>
         <div class="footer__links">
           <div class="footer__col">
-            <h4>Services</h4>
-            <a href="#services">AI Voice Agents</a>
-            <a href="#services">Lead Nurture Systems</a>
-            <a href="#services">AI Sales Assistants</a>
-            <a href="#services">White-Label AI</a>
+            <h4>Solutions</h4>
+            <a href="#solutions">AI Voice Agents</a>
+            <a href="#solutions">Lead Nurture</a>
+            <a href="#solutions">AI Chatbots</a>
+            <a href="#solutions">White-Label AI</a>
           </div>
           <div class="footer__col">
             <h4>Company</h4>
             <a href="#how-it-works">How It Works</a>
             <a href="#results">Results</a>
+            <a href="#compare">Compare</a>
             <a href="#pricing">Pricing</a>
-            <a href="#faq">FAQ</a>
           </div>
           <div class="footer__col">
             <h4>Contact</h4>
@@ -587,7 +584,7 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 2025 Churnless Studios. All rights reserved.</p>
+        <p>© 2025 Churnless Studios. All rights reserved.</p>
         <div class="footer__legal">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>
