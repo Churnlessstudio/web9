@@ -385,6 +385,44 @@ body {
 }
 
 /* =========================================================
+   ABOUT
+   ========================================================= */
+.about {
+  padding: 100px 0;
+  background: #0a0a0f;
+}
+.about__headline {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 56px;
+}
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+.about__col--lead p {
+  font-size: 1.25rem;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.85);
+  font-weight: 400;
+}
+.about__col p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 20px;
+}
+.about__col p:last-child { margin-bottom: 0; }
+@media (max-width: 768px) {
+  .about__grid { grid-template-columns: 1fr; gap: 32px; }
+}
+
+/* =========================================================
    PROBLEM
    ========================================================= */
 .problem {
